@@ -41,7 +41,7 @@ Hlavička je uvozena a ukončena třemi spojovníky: `---`, uvnitř se použív�
 
 ```yaml
 ---
-title| "Nejrelativnější „článek“"
+title| Nejrelativnější „článek“
 ---
 ```
 
@@ -73,7 +73,5 @@ python builder.py
 ```
 
 Build vytvoří `article.html`, jehož obsah následně vrazíte do hlavní položky ve snowfall šabloně.
-
-Přidávejte vše, co vám to nabídne, gitignore je správně nastavený. Zejména se nebojte přidat vygenerované obrázky, ulehčíte serveru, který je nebude muset generovat znova.
 
 Pokud potřebujete nahrát nejrůznější obrázky, vkládejte je do složky media, objeví se na adrese `interaktivni.rozhlas.cz/data/jmeno-projektu/media/SOUBOR`.
