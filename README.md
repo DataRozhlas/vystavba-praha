@@ -33,10 +33,9 @@ smzd add jmeno-projektu
 Celý neinteraktivní obsah se nastavuje v souboru `article.md`. Skládá se, podobně [Jekyll](https://jekyllrb.com/docs/frontmatter/), ze dvou částí: hlavičky a obsahu.
 
 ### Hlavička
-Hlavička je uvozena a ukončena třemi spojovníky: `---`, uvnitř se používá ~~YAML~~ Cíbova prasokonvence. V zásadě je tam každá proměnná na novém řádku, její název je to co je před pajpou (|) a mezerou a obsah co je za ní. Textový obsah (pokud to není pole) se nedává do uvoizovek. Uvozovky v uvozovkách je nejlepší řešit typografickými uvozovkami.
+Hlavička je ukončena třemi spojovníky: `---`, uvnitř se používá ~~YAML~~ Cíbova prasokonvence. V zásadě je tam každá proměnná na novém řádku, její název je to co je před pajpou (|) a mezerou a obsah co je za ní. Textový obsah (pokud to není pole) se nedává do uvozovek. Uvozovky v hlavičce je nejlepší řešit typografickými uvozovkami.
 
 ```yaml
----
 title| Nejrelativnější „článek“
 ---
 ```
