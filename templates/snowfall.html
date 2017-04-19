@@ -1,0 +1,32 @@
+{libraries}
+{styles}
+<div class="b-data__bg" style="background-image: url('{coverimg}');"><span style="position: absolute; right: 10px; bottom: 10px; font-size: 12px; color:white;"><i>{coverimg_note}</i></span></div>
+<header class="b-data__header">
+<div class="row-main">
+	<h1 class="b-data__title">
+		<strong>{title}</strong><br>
+		{perex}
+	</h1>
+        <h4><i>{authors}</i></h4><br>
+	<p>
+	<a href="#content" class="b-data__link js-slide-to">
+	Čtěte dále
+	<span class="b-data__link-icon">
+	<span class="icon-svg icon-svg--arrow-down">
+	<svg class="icon-svg__svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<use xlink:href="/sites/all/themes/custom/irozhlas/img/bg/icons-svg.svg#icon-arrow-down" x="0" y="0" width="100%" height="100%"></use>
+	</svg>
+</span>
+</span>
+</a>
+</p>
+</div>
+</header>
+
+<div class="b-data__content" id="content">
+<div class="row-main row-main--article">
+
+{content}
+
+</div>
+</div>
