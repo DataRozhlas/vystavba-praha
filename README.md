@@ -3,11 +3,7 @@
 > Já jsem šablona, co generuje střeva pro snowfall články.
 
 ## Předpoklady
-Je třeba [Python 3](https://www.python.org/downloads/) a nainstalované (`pip install KNIHOVNA`) knihovny:
-markdown
-jsmin
-ast
-csscompressor
+Je třeba [Python 3](https://www.python.org/downloads/) a nainstalované knihovny: (`pip install markdown jsmin ast csscompressor`)
 
 ## Nový článek
 
