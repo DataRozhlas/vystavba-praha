@@ -1,10 +1,10 @@
-title| Data z mobilů:
-perex| Praha se denně nafoukne o polovinu, v centru jsou návštěvníci v převaze
-authors| ["Jan Cibulka", "Petr Kočí"]
-coverimg| https://interaktivni.rozhlas.cz/brexit/media/cover.jpg
-coverimg_note| Foto <a href='#'>ČTK</a>
-styles| []
-libraries| ["https://unpkg.com/jquery@3.2.1"]
+title: Data z mobilů:
+perex: Praha se denně nafoukne o polovinu, v centru jsou návštěvníci v převaze
+authors: ["Jan Cibulka", "Petr Kočí"]
+coverimg: https://interaktivni.rozhlas.cz/brexit/media/cover.jpg
+coverimg_note: Foto <a href='#'>ČTK</a>
+styles: []
+libraries: ["https://unpkg.com/jquery@3.2.1"]
 ---
 
 Skoro 140 tisíc lidí přijede do Prahy každý den za prací. Míří hlavně do kancelářských budov a do centra města. S nimi pak dorazí i přes půl milionu návštěvníků. Ukázala to analýza dat o pohybu mobilních telefonů, kterou si nyní město nechává zpracovat.
