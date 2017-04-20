@@ -33,14 +33,14 @@ smzd add jmeno-projektu
 Celý neinteraktivní obsah se nastavuje v souboru `article.md`. Skládá se, podobně [Jekyll](https://jekyllrb.com/docs/frontmatter/), ze dvou částí: hlavičky a obsahu.
 
 ### Hlavička
-Hlavička je ukončena třemi spojovníky: `---`, uvnitř se používá ~~YAML~~ Cíbova prasokonvence. V zásadě je tam každá proměnná na novém řádku, její název je to co je před pajpou dvojtečkou a mezerou a obsah co je za ní. Textový obsah (pokud to není pole) se nedává do uvozovek. Uvozovky v hlavičce je nejlepší řešit typografickými uvozovkami.
+Hlavička je ukončena třemi spojovníky: `---`, uvnitř se používá YAML. V zásadě je tam každá proměnná na novém řádku, její název je to co je před pajpou dvojtečkou a mezerou a obsah co je za ní. Textový obsah (pokud to není pole) se nedává do uvozovek. Uvozovky v hlavičce je nejlepší řešit typografickými uvozovkami.
 
 ```yaml
 title| Nejrelativnější „článek“
 ---
 ```
 
-Prasostyl umí i pole, to se používá u seznamu autorů. To se píše jako ve většině programovacích jazyků
+YAML umí i pole, to se používá u seznamu autorů. To se píše jako ve většině programovacích jazyků
 
 ```yaml
 authors| ["Jan Boček", "Jiří Hošek", "Jan Cibulka", "Marcel Šulek"]
@@ -67,6 +67,6 @@ Celý článek buildnete příkazem
 python builder.py
 ```
 
-Build vytvoří `article.html`, jehož obsah následně vrazíte do hlavní položky ve snowfall šabloně.
+Build vytvoří `article.html`, jehož obsah následně vrazíte do hlavní položky ve snowfall šabloně. Také vytvoří náhledový index.html pro kontrolu, než to vrazíte na produkci.
 
 Pokud potřebujete nahrát nejrůznější obrázky, vkládejte je do složky media, objeví se na adrese `interaktivni.rozhlas.cz/data/jmeno-projektu/media/SOUBOR`.
