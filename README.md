@@ -30,20 +30,20 @@ smzd add jmeno-projektu
 - To je celé! Teď už se můžeme vrhnout na psaní článku.
 
 ## Psaní článku
-Celý neinteraktivní obsah se nastavuje v souboru `article.md`. Skládá se, podobně [Jekyll](https://jekyllrb.com/docs/frontmatter/), ze dvou částí: hlavičky a obsahu.
+Celý neinteraktivní obsah se nastavuje v souboru `article.md`. Skládá se, podobně jako [Jekyll](https://jekyllrb.com/docs/frontmatter/), ze dvou částí: hlavičky a obsahu.
 
 ### Hlavička
-Hlavička je ukončena třemi spojovníky: `---`, uvnitř se používá YAML. V zásadě je tam každá proměnná na novém řádku, její název je to co je před pajpou dvojtečkou a mezerou a obsah co je za ní. Textový obsah (pokud to není pole) se nedává do uvozovek. Uvozovky v hlavičce je nejlepší řešit typografickými uvozovkami.
+Hlavička je ukončena třemi spojovníky: `---`, uvnitř se používá YAML. V zásadě je tam každá proměnná na novém řádku, její název je to, co je před dvojtečkou a mezerou a obsah to, co je za ní. Textový obsah (pokud to není pole) se nedává do uvozovek. Uvozovky v hlavičce je nejlepší řešit typografickými uvozovkami.
 
 ```yaml
-title| Nejrelativnější „článek“
+title: Nejrelativnější „článek“
 ---
 ```
 
 YAML umí i pole, to se používá u seznamu autorů. To se píše jako ve většině programovacích jazyků
 
 ```yaml
-authors| ["Jan Boček", "Jiří Hošek", "Jan Cibulka", "Marcel Šulek"]
+authors: ["Jan Boček", "Jiří Hošek", "Jan Cibulka", "Marcel Šulek"]
 ```
 
 V hlavičce jsou tyto podporované proměnné. Pokud není napsáno jinak, jsou povinné.
