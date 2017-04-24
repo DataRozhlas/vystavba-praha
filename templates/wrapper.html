@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- saved from url=(0052)http://rozhlas2017.superkoderi.cz/tpl/14-datari.html -->
-<html lang="cs" class="js no-touchevents fonts-loaded"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="cs" class="js fonts-loaded no-touchevents"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	
 	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
 	<meta name="description" content="">
@@ -35,6 +35,7 @@
 	<script>
 		(function () {
 			var className = document.documentElement.className;
+			isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);
 
 			function getCookie(name) {
 				var value = '; ' + document.cookie;
@@ -58,8 +59,12 @@
 				className += ' page-inverse';
 			}
 
-			if(document.cookie.indexOf('textVersion') > -1) {
+			if(document.cookie.indexOf('textVersion') > -1 || isOperaMini) {
 				className += ' page-text-version';
+			}
+
+			if(isOperaMini) {
+				className += ' operamini';
 			}
 
 			if(/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
@@ -74,13 +79,13 @@
 
 			document.documentElement.className = className;
 		}());
-	</script>
+	</script><style type="text/css">
+:root #content > #right > .dose > .dosesingle,
+:root #content > #center > .dose > .dosesingle
+{ display: none !important; }</style>
 
-	<script src="./wrapper_files/modernizr.min.js.download"></script>
-<style type="text/css">
-:root #content > #center > .dose > .dosesingle,
-:root #content > #right > .dose > .dosesingle
-{ display: none !important; }</style></head>
+	<script src="./wrapper_files/modernizr.min.js"></script>
+</head>
 
 	<body id="top" class="">
 <nav class="m-accessibility" aria-labelledby="m-accessibility">
@@ -103,7 +108,7 @@
 			<label for="search-header" class="inp__label js-search">
 				<span class="icon-svg icon-svg--search">
 	<svg class="icon-svg__svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<use xlink:href="./wrapper_files/icons-svg.svg#icon-search" x="0" y="0" width="100%" height="100%"></use>
+		<use xlink:href="../img/bg/icons-svg.svg#icon-search" x="0" y="0" width="100%" height="100%"></use>
 </svg><span class="icon-svg__fallback">Vyhledávání</span>	
 </span>
 
@@ -115,7 +120,7 @@
 					<span class="btn__text">
 						<span class="icon-svg icon-svg--search">
 	<svg class="icon-svg__svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<use xlink:href="./wrapper_files/icons-svg.svg#icon-search" x="0" y="0" width="100%" height="100%"></use>
+		<use xlink:href="../img/bg/icons-svg.svg#icon-search" x="0" y="0" width="100%" height="100%"></use>
 </svg><span class="icon-svg__fallback">Vyhledat</span>	
 </span>
 
@@ -130,7 +135,7 @@
 				<a href="http://rozhlas2017.superkoderi.cz/tpl/14-datari.html#" class="header__images js-text-version--icon">
 					<span class="icon-svg icon-svg--images">
 	<svg class="icon-svg__svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<use xlink:href="./wrapper_files/icons-svg.svg#icon-images" x="0" y="0" width="100%" height="100%"></use>
+		<use xlink:href="../img/bg/icons-svg.svg#icon-images" x="0" y="0" width="100%" height="100%"></use>
 	</svg>
 </span>
 
@@ -142,7 +147,7 @@
 			<span class="vhide">iRozhlas</span>
 			<span class="icon-svg icon-svg--logo-irozhlas">
 	<svg class="icon-svg__svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<use xlink:href="./wrapper_files/icons-svg.svg#icon-logo-irozhlas" x="0" y="0" width="100%" height="100%"></use>
+		<use xlink:href="../img/bg/icons-svg.svg#icon-logo-irozhlas" x="0" y="0" width="100%" height="100%"></use>
 </svg><span class="icon-svg__fallback">iRozhlas</span>	
 </span>
 
@@ -154,7 +159,7 @@
 						<span class="vhide">Hlavní menu</span>
 						<span class="icon-svg icon-svg--menu">
 	<svg class="icon-svg__svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<use xlink:href="./wrapper_files/icons-svg.svg#icon-menu" x="0" y="0" width="100%" height="100%"></use>
+		<use xlink:href="../img/bg/icons-svg.svg#icon-menu" x="0" y="0" width="100%" height="100%"></use>
 	</svg>
 </span>
 
@@ -164,20 +169,40 @@
 						<span class="vhide">Český rozhlas - Zprávy</span>
 						<span class="icon-svg icon-svg--symbol">
 	<svg class="icon-svg__svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<use xlink:href="./wrapper_files/icons-svg.svg#icon-symbol" x="0" y="0" width="100%" height="100%"></use>
+		<use xlink:href="../img/bg/icons-svg.svg#icon-symbol" x="0" y="0" width="100%" height="100%"></use>
 	</svg>
 </span>
 
 					</a>
 				</nav>
 			</div>
+
+			<p class="header__socials">
+				<a href="http://rozhlas2017.superkoderi.cz/tpl/14-datari.html#">
+					<span class="icon-svg icon-svg--facebook">
+	<svg class="icon-svg__svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<use xlink:href="../img/bg/icons-svg.svg#icon-facebook" x="0" y="0" width="100%" height="100%"></use>
+	</svg>
+</span>
+
+					<span class="vhide">Facebook</span>
+				</a>
+				<a href="http://rozhlas2017.superkoderi.cz/tpl/14-datari.html#">
+					<span class="icon-svg icon-svg--twitter">
+	<svg class="icon-svg__svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<use xlink:href="../img/bg/icons-svg.svg#icon-twitter" x="0" y="0" width="100%" height="100%"></use>
+	</svg>
+</span>
+
+					<span class="vhide">Twitter</span>
+				</a>
+			</p>
 		</header>
 
 		<main id="main" class="main" role="main">
-			<article role="article" class="b-data">
-			{content}
-			</article>
-
+			<article role="article" class="b-data"> 
+				{content}
+</article>
 			<div class="wrapper">
 				<div class="row-main">
 					<section role="region" class="b-category">
@@ -186,7 +211,7 @@
 								<a href="http://rozhlas2017.superkoderi.cz/tpl/14-datari.html#">
 									<span class="icon-svg icon-svg--bullet">
 	<svg class="icon-svg__svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<use xlink:href="./wrapper_files/icons-svg.svg#icon-bullet" x="0" y="0" width="100%" height="100%"></use>
+		<use xlink:href="../img/bg/icons-svg.svg#icon-bullet" x="0" y="0" width="100%" height="100%"></use>
 	</svg>
 </span>
 
@@ -205,7 +230,7 @@
 							Přehrát
 							<span class="icon-svg icon-svg--play">
 	<svg class="icon-svg__svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<use xlink:href="./wrapper_files/icons-svg.svg#icon-play" x="0" y="0" width="100%" height="100%"></use>
+		<use xlink:href="../img/bg/icons-svg.svg#icon-play" x="0" y="0" width="100%" height="100%"></use>
 	</svg>
 </span>
 
@@ -226,7 +251,7 @@
 							Přehrát
 							<span class="icon-svg icon-svg--play">
 	<svg class="icon-svg__svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<use xlink:href="./wrapper_files/icons-svg.svg#icon-play" x="0" y="0" width="100%" height="100%"></use>
+		<use xlink:href="../img/bg/icons-svg.svg#icon-play" x="0" y="0" width="100%" height="100%"></use>
 	</svg>
 </span>
 
@@ -301,7 +326,7 @@
 										Další články
 										<span class="icon-svg icon-svg--arrow-dots">
 	<svg class="icon-svg__svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<use xlink:href="./wrapper_files/icons-svg.svg#icon-arrow-dots" x="0" y="0" width="100%" height="100%"></use>
+		<use xlink:href="../img/bg/icons-svg.svg#icon-arrow-dots" x="0" y="0" width="100%" height="100%"></use>
 	</svg>
 </span>
 
@@ -349,7 +374,7 @@
 					Nahoru
 					<span class="icon-svg icon-svg--top">
 	<svg class="icon-svg__svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<use xlink:href="./wrapper_files/icons-svg.svg#icon-top" x="0" y="0" width="100%" height="100%"></use>
+		<use xlink:href="../img/bg/icons-svg.svg#icon-top" x="0" y="0" width="100%" height="100%"></use>
 	</svg>
 </span>
 
@@ -364,7 +389,7 @@
 					<span class="vhide">iRozhlas</span>
 					<span class="icon-svg icon-svg--logo-irozhlas">
 	<svg class="icon-svg__svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<use xlink:href="./wrapper_files/icons-svg.svg#icon-logo-irozhlas" x="0" y="0" width="100%" height="100%"></use>
+		<use xlink:href="../img/bg/icons-svg.svg#icon-logo-irozhlas" x="0" y="0" width="100%" height="100%"></use>
 	</svg>
 </span>
 
@@ -381,7 +406,7 @@
 						<a href="http://rozhlas2017.superkoderi.cz/tpl/14-datari.html#" class="m-tools__link js-force-desktop-reset">
 							<span class="m-tools__icon"><span class="icon-svg icon-svg--mobile">
 	<svg class="icon-svg__svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<use xlink:href="./wrapper_files/icons-svg.svg#icon-mobile" x="0" y="0" width="100%" height="100%"></use>
+		<use xlink:href="../img/bg/icons-svg.svg#icon-mobile" x="0" y="0" width="100%" height="100%"></use>
 	</svg>
 </span>
 </span>
@@ -392,7 +417,7 @@
 						<a href="http://rozhlas2017.superkoderi.cz/tpl/14-datari.html#" class="m-tools__link">
 							<span class="m-tools__icon"><span class="icon-svg icon-svg--rss">
 	<svg class="icon-svg__svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<use xlink:href="./wrapper_files/icons-svg.svg#icon-rss" x="0" y="0" width="100%" height="100%"></use>
+		<use xlink:href="../img/bg/icons-svg.svg#icon-rss" x="0" y="0" width="100%" height="100%"></use>
 	</svg>
 </span>
 </span>
@@ -437,7 +462,7 @@
 	</div>
 </footer>
 
-<div class="b-cookie">
+<div class="b-cookie is-visible">
 	<div class="row-main">
 		<div class="b-cookie__content">
 			<p>
@@ -447,7 +472,7 @@
 		<a href="http://rozhlas2017.superkoderi.cz/tpl/14-datari.html#" class="b-cookie__close js-cookie-close">
 			<span class="icon-svg icon-svg--close">
 	<svg class="icon-svg__svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<use xlink:href="./wrapper_files/icons-svg.svg#icon-close" x="0" y="0" width="100%" height="100%"></use>
+		<use xlink:href="../img/bg/icons-svg.svg#icon-close" x="0" y="0" width="100%" height="100%"></use>
 	</svg>
 </span>
 
@@ -461,7 +486,7 @@
 		<span class="vhide">Český rozhlas - Zprávy</span>
 		<span class="icon-svg icon-svg--logo-irozhlas">
 	<svg class="icon-svg__svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<use xlink:href="./wrapper_files/icons-svg.svg#icon-logo-irozhlas" x="0" y="0" width="100%" height="100%"></use>
+		<use xlink:href="../img/bg/icons-svg.svg#icon-logo-irozhlas" x="0" y="0" width="100%" height="100%"></use>
 	</svg>
 </span>
 
@@ -471,7 +496,7 @@
 		<span class="vhide">Zavřít</span>
 		<span class="icon-svg icon-svg--close">
 	<svg class="icon-svg__svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<use xlink:href="./wrapper_files/icons-svg.svg#icon-close" x="0" y="0" width="100%" height="100%"></use>
+		<use xlink:href="../img/bg/icons-svg.svg#icon-close" x="0" y="0" width="100%" height="100%"></use>
 	</svg>
 </span>
 
@@ -491,7 +516,7 @@
 						<span class="vhide">Vyhledat</span>
 						<span class="icon-svg icon-svg--search">
 	<svg class="icon-svg__svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<use xlink:href="./wrapper_files/icons-svg.svg#icon-search" x="0" y="0" width="100%" height="100%"></use>
+		<use xlink:href="../img/bg/icons-svg.svg#icon-search" x="0" y="0" width="100%" height="100%"></use>
 	</svg>
 </span>
 
@@ -557,7 +582,7 @@
 				<span class="vhide">Facebook</span>
 				<span class="icon-svg icon-svg--facebook">
 	<svg class="icon-svg__svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<use xlink:href="./wrapper_files/icons-svg.svg#icon-facebook" x="0" y="0" width="100%" height="100%"></use>
+		<use xlink:href="../img/bg/icons-svg.svg#icon-facebook" x="0" y="0" width="100%" height="100%"></use>
 	</svg>
 </span>
 
@@ -566,7 +591,7 @@
 				<span class="vhide">Twitter</span>
 				<span class="icon-svg icon-svg--twitter">
 	<svg class="icon-svg__svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<use xlink:href="./wrapper_files/icons-svg.svg#icon-twitter" x="0" y="0" width="100%" height="100%"></use>
+		<use xlink:href="../img/bg/icons-svg.svg#icon-twitter" x="0" y="0" width="100%" height="100%"></use>
 	</svg>
 </span>
 
@@ -575,7 +600,7 @@
 				<span class="vhide">Google+</span>
 				<span class="icon-svg icon-svg--gplus">
 	<svg class="icon-svg__svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<use xlink:href="./wrapper_files/icons-svg.svg#icon-gplus" x="0" y="0" width="100%" height="100%"></use>
+		<use xlink:href="../img/bg/icons-svg.svg#icon-gplus" x="0" y="0" width="100%" height="100%"></use>
 	</svg>
 </span>
 
@@ -636,7 +661,7 @@
 		<span class="vhide">Zavřít</span>
 		<span class="icon-svg icon-svg--close">
 	<svg class="icon-svg__svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<use xlink:href="./wrapper_files/icons-svg.svg#icon-close" x="0" y="0" width="100%" height="100%"></use>
+		<use xlink:href="../img/bg/icons-svg.svg#icon-close" x="0" y="0" width="100%" height="100%"></use>
 	</svg>
 </span>
 
@@ -645,7 +670,7 @@
 		</nav>
 
 		<!--[if (gte IE 9)|!(IE)]><!-->
-		<script src="./wrapper_files/app.js.download"></script>
+		<script src="./wrapper_files/app.js"></script>
 		<script>
 			App.run({});
 		</script>

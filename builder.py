@@ -1,18 +1,14 @@
 
 # coding: utf-8
 
-# In[14]:
+# In[1]:
 
-import markdown
+import markdown, re, os, yaml
 from jsmin import jsmin
-import ast
-import re
-import os
 from csscompressor import compress
-import yaml
 
 
-# In[15]:
+# In[2]:
 
 # read markdown article
 with open('article.md', encoding='utf-8') as text:
@@ -21,19 +17,19 @@ with open('article.md', encoding='utf-8') as text:
     main = parts[1]
 
 
-# In[16]:
+# In[3]:
 
 art = yaml.load(header)
 
 
-# In[17]:
+# In[4]:
 
 #names of authors
 tmp = ', '.join(art['authors'])
 art['authors'] = ' a '.join(tmp.rsplit(', ', 1))
 
 
-# In[18]:
+# In[5]:
 
 # format external JS links
 tmp = ''
@@ -42,36 +38,36 @@ for lib in art['libraries']:
 art['libraries'] = tmp
 
 
-# In[19]:
+# In[6]:
 
 # format external CSS links 
 tmp = ''
-for styl in art['styles']:
-    tmp += '<link rel="stylesheet" type="text/css" href="{0}">\n'.format(styl)
+for style in art['styles']:
+    tmp += '<link rel="stylesheet" type="text/css" href="{0}">\n'.format(style)
 art['styles'] = tmp
 
 
-# In[20]:
+# In[7]:
 
 # article content
 art['content'] = markdown.markdown(main)
 
 
-# In[21]:
+# In[8]:
 
 #read snowfall template
 with open('./templates/snowfall.html', encoding='utf-8') as t:
     template = t.read()
 
 
-# In[22]:
+# In[9]:
 
 # fill template
 for variable in re.findall(r"\{(\w+)\}", template):
     template = template.replace('{' + variable + '}', str(art[variable]))
 
 
-# In[23]:
+# In[10]:
 
 # pack JSscripts
 temp = ''
@@ -83,26 +79,26 @@ for script in os.listdir('./js/'):
 template = template + '<script>' + temp + '</script>\n' 
 
 
-# In[24]:
+# In[11]:
 
 # pack styles
 temp = ''
-for script in os.listdir('./styles/'):
-    with open('./styles/' + script, encoding='utf-8') as css_file:
+for style in os.listdir('./styles/'):
+    with open('./styles/' + style, encoding='utf-8') as css_file:
         csmin = compress(css_file.read())
         temp += csmin
 
 template = '<style>' + temp + '</style>\n' + template
 
 
-# In[25]:
+# In[12]:
 
 #write template
 with open('./article.html', 'w', encoding='utf-8') as f:
     f.write(template)
 
 
-# In[26]:
+# In[13]:
 
 # write wrapped content into dummy index
 with open('./templates/wrapper.html', encoding='utf-8') as t:
