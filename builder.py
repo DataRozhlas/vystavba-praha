@@ -1,14 +1,14 @@
 
 # coding: utf-8
 
-# In[43]:
+# In[112]:
 
 import markdown, re, os, yaml
 from jsmin import jsmin
 from csscompressor import compress
 
 
-# In[44]:
+# In[113]:
 
 # read markdown article
 with open('article.md', encoding='utf-8') as text:
@@ -17,19 +17,19 @@ with open('article.md', encoding='utf-8') as text:
     main = parts[1]
 
 
-# In[45]:
+# In[114]:
 
 art = yaml.load(header)
 
 
-# In[46]:
+# In[115]:
 
 #names of authors
 tmp = ', '.join(art['authors'])
 art['authors'] = ' a '.join(tmp.rsplit(', ', 1))
 
 
-# In[47]:
+# In[116]:
 
 # format external JS links
 tmp = ''
@@ -38,7 +38,7 @@ for lib in art['libraries']:
 art['libraries'] = tmp
 
 
-# In[48]:
+# In[117]:
 
 # format external CSS links 
 tmp = ''
@@ -47,40 +47,40 @@ for style in art['styles']:
 art['styles'] = tmp
 
 
-# In[49]:
+# In[118]:
 
 # article content
 art['content'] = markdown.markdown(main)
 
 
-# In[50]:
+# In[119]:
 
 #read snowfall template
 with open('./templates/snowfall.html', encoding='utf-8') as t:
     template = t.read()
 
 
-# In[51]:
+# In[127]:
 
 #read options
 options = art['options'].split(", ")
 
 
-# In[58]:
+# In[121]:
 
 #option: wide
 if "wide" in options: art['column'] = "<div class=\"row-main row-main--article\">"
 else: art['column'] = "<div class=\"row-main row-main--narrow\">"
 
 
-# In[14]:
+# In[122]:
 
 # fill template
 for variable in re.findall(r"\{(\w+)\}", template):
     template = template.replace('{' + variable + '}', str(art[variable]))
 
 
-# In[28]:
+# In[123]:
 
 # pack JSscripts
 temp = ''
@@ -92,7 +92,7 @@ for script in os.listdir('./js/'):
 template = template + '<script>' + temp + '</script>\n' 
 
 
-# In[29]:
+# In[124]:
 
 # pack styles
 temp = ''
@@ -104,14 +104,14 @@ for style in os.listdir('./styles/'):
 template = '<style>' + temp + '</style>\n' + template
 
 
-# In[30]:
+# In[125]:
 
 #write template
-with open('./article.html', 'w', encoding='utf-8') as f:
+with open('./output.html', 'w', encoding='utf-8') as f:
     f.write(template)
 
 
-# In[31]:
+# In[126]:
 
 # write wrapped content into dummy index
 with open('./templates/wrapper.html', encoding='utf-8') as t:
@@ -121,9 +121,4 @@ wrapper = wrapper.replace('{content}', template)
 
 with open('./index.html', 'w', encoding='utf-8') as f:
     f.write(wrapper)
-
-
-# In[ ]:
-
-
 
