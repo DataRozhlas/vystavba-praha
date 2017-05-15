@@ -3,7 +3,7 @@
 > Já jsem šablona, co generuje střeva pro snowfall články.
 
 ## Předpoklady
-Je třeba [Python 3](https://www.python.org/downloads/) a nainstalované knihovny (příkazem `pip install markdown jsmin csscompressor`)
+Je třeba [Python 3](https://www.python.org/downloads/) a nainstalované knihovny (příkazem `pip install markdown jsmin csscompressor pyyaml`)
 
 ## Nový článek
 
@@ -51,13 +51,16 @@ V hlavičce jsou tyto podporované proměnné. Pokud není napsáno jinak, jsou 
 - `title` Nadpis článku.
 - `perex` Perex.
 - `authors` Seznam autorů.
-- `coverimg` Odkaz na webově dosažitelný uvodní velkoobrázek. Co největší, při prvním buildu se vygenerují potřebné zmenšeniny.  Má-li se použít šablona bez obrázku, proměnná se vůbec nezadává a celý řádek se smaže.
+- `published` Datum vydání.
+- `coverimg` Odkaz na webově dosažitelný uvodní velkoobrázek. Co největší, při prvním buildu se vygenerují potřebné zmenšeniny.
+- `coverimg_note` Popisek k velkoobrázku (s možnou atribucí).
 - `libraries` pole požadovaných externích knihoven. Je nutné vložit celou URL na knihovnu, nedoporučuju ale odkazovat knihovny na cizích serverech, v každém případě cíl musí být na https.
 - `styles` pole požadovaných externích stylů, píše se celá URL, např. `styles: [https://js.arcgis.com/3.17/esri/css/esri.css]`. Opět příliš nedoporučuju odkazovat na cizí servery a opět cíl musí být na https.
-- **Ideálně vkládejte JS skripty do složky `js` a CSS styly do složky `styles`**
+- **Vlastní JS skripty vkládejte do složky `js`, CSS styly do složky `styles`. Přikompilují se pak automaticky.**
+- `options` pro různé přepínače. Oddělují se čárkou a mezerou: `option1, option2, ...` Jediná option je zatím `wide`, který nastaví široký textový sloupec.
 
 ### Obsah
-Obsah se píše v [Markdownu](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). Ne všechny prvky jsou nastylovány z výroby, pokud vám nějaký bude scházet. dejte vědět.
+Obsah se píše v [Markdownu](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). Ne všechny prvky jsou nastylovány z výroby, pokud vám nějaký bude scházet, dejte vědět.
 
 Různé interaktivity a obrázky se vkládají přes čisté HTML a s **absolutními cestami k souboru**, v dohledné době přibydou i šablony na boxíky.
 
@@ -67,6 +70,6 @@ Celý článek buildnete příkazem
 python builder.py
 ```
 
-Build vytvoří `article.html`, jehož obsah následně vrazíte do hlavní položky ve snowfall šabloně. Také vytvoří náhledový index.html pro kontrolu, než to vrazíte na produkci.
+Build vytvoří `output.html`, jehož obsah následně vrazíte do hlavní položky ve snowfall šabloně. Také vytvoří náhledový `index.html` pro kontrolu. Pokud ho kopírujete a zobrazujete z jiné složky, je spolu s ním nutné zkopírovat i složky `fonts` a `wrapper_files`.
 
 Pokud potřebujete nahrát nejrůznější obrázky, vkládejte je do složky media, objeví se na adrese `interaktivni.rozhlas.cz/data/jmeno-projektu/media/SOUBOR`.
