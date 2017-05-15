@@ -19,7 +19,7 @@
 
 	<title>Dataři | iRozhlas</title>
 
-	<link rel="stylesheet" href="./wrapper_files/style.css" media="screen">
+	<link rel="stylesheet" href="./wrapper_files/style.css" media="screen, handheld">
 	<link rel="stylesheet" href="./wrapper_files/print.css" media="print">
 
 	<link rel="icon" href="http://rozhlas2017.superkoderi.cz/img/favicon.ico">
@@ -51,7 +51,7 @@
 
 			className = className.replace('no-js', 'js');
 
-			if(window.name.indexOf('fontsLoaded=true') > -1) {
+			if(document.cookie.indexOf('fontsLoaded') > -1) {
 				className += ' fonts-loaded';
 			}
 
@@ -79,13 +79,16 @@
 
 			document.documentElement.className = className;
 		}());
-	</script><style type="text/css">
-:root #content > #right > .dose > .dosesingle,
-:root #content > #center > .dose > .dosesingle
-{ display: none !important; }</style>
+	</script>
 
 	<script src="./wrapper_files/modernizr.min.js"></script>
-</head>
+<style type="text/css">
+:root #content > #center > .dose > .dosesingle,
+:root #content > #right > .dose > .dosesingle
+{ display: none !important; }</style><style type="text/css">
+:root #content > #right > .dose > .dosesingle,
+:root #content > #center > .dose > .dosesingle
+{ display: none !important; }</style></head>
 
 	<body id="top" class="">
 <nav class="m-accessibility" aria-labelledby="m-accessibility">
@@ -201,7 +204,7 @@
 
 		<main id="main" class="main" role="main">
 			<article role="article" class="b-data"> 
-				<style></style>
+			<style></style>
 <script src="https://unpkg.com/jquery@3.2.1"></script>
 
 
@@ -251,6 +254,12 @@
 </div><script></script>
 
 </article>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+
 			<div class="wrapper">
 				<div class="row-main">
 					<section role="region" class="b-category">
@@ -509,24 +518,6 @@
 		</div>
 	</div>
 </footer>
-
-<div class="b-cookie is-visible">
-	<div class="row-main">
-		<div class="b-cookie__content">
-			<p>
-				Tento web používá k analýze návštěvnosti soubory cookie. Používáním tohoto webu s tím souhlasíte. <a href="http://rozhlas2017.superkoderi.cz/tpl/14-datari.html#" class="js-cookie-close"><strong>Rozumím</strong></a> | <a href="http://rozhlas2017.superkoderi.cz/tpl/14-datari.html#">Další informace</a>
-			</p>
-		</div>
-		<a href="http://rozhlas2017.superkoderi.cz/tpl/14-datari.html#" class="b-cookie__close js-cookie-close">
-			<span class="icon-svg icon-svg--close">
-	<svg class="icon-svg__svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<use xlink:href="./wrapper_files/icons-svg.svg#icon-close" x="0" y="0" width="100%" height="100%"></use>
-	</svg>
-</span>
-
-		</a>
-	</div>
-</div>
 
 		<nav class="m-mobile">
 <div class="m-mobile__panel">

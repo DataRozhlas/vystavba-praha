@@ -19,7 +19,7 @@
 
 	<title>Dataři | iRozhlas</title>
 
-	<link rel="stylesheet" href="./wrapper_files/style.css" media="screen">
+	<link rel="stylesheet" href="./wrapper_files/style.css" media="screen, handheld">
 	<link rel="stylesheet" href="./wrapper_files/print.css" media="print">
 
 	<link rel="icon" href="http://rozhlas2017.superkoderi.cz/img/favicon.ico">
@@ -51,7 +51,7 @@
 
 			className = className.replace('no-js', 'js');
 
-			if(window.name.indexOf('fontsLoaded=true') > -1) {
+			if(document.cookie.indexOf('fontsLoaded') > -1) {
 				className += ' fonts-loaded';
 			}
 
@@ -79,13 +79,16 @@
 
 			document.documentElement.className = className;
 		}());
-	</script><style type="text/css">
-:root #content > #right > .dose > .dosesingle,
-:root #content > #center > .dose > .dosesingle
-{ display: none !important; }</style>
+	</script>
 
 	<script src="./wrapper_files/modernizr.min.js"></script>
-</head>
+<style type="text/css">
+:root #content > #center > .dose > .dosesingle,
+:root #content > #right > .dose > .dosesingle
+{ display: none !important; }</style><style type="text/css">
+:root #content > #right > .dose > .dosesingle,
+:root #content > #center > .dose > .dosesingle
+{ display: none !important; }</style></head>
 
 	<body id="top" class="">
 <nav class="m-accessibility" aria-labelledby="m-accessibility">
@@ -201,8 +204,14 @@
 
 		<main id="main" class="main" role="main">
 			<article role="article" class="b-data"> 
-				{content}
+			{content}
 </article>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+
 			<div class="wrapper">
 				<div class="row-main">
 					<section role="region" class="b-category">
