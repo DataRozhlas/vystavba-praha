@@ -1,6 +1,7 @@
 title: "Data z mobilů:"
 perex: "Praha se denně nafoukne o polovinu, v centru jsou návštěvníci v převaze"
 authors: ["Jan Cibulka", "Petr Kočí"]
+published: "21. dubna 2017"
 coverimg: https://interaktivni.rozhlas.cz/brexit/media/cover.jpg
 coverimg_note: "Foto <a href='#'>ČTK</a>"
 styles: []
