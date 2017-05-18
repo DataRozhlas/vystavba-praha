@@ -62,7 +62,9 @@ V hlavičce jsou tyto podporované proměnné. Pokud není napsáno jinak, jsou 
 ### Obsah
 Obsah se píše v [Markdownu](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). Ne všechny prvky jsou nastylovány z výroby, pokud vám nějaký bude scházet, dejte vědět.
 
-Různé interaktivity a obrázky se vkládají přes čisté HTML a s **absolutními cestami k souboru**, v dohledné době přibydou i šablony na boxíky.
+Různé interaktivity a obrázky se vkládají přes čisté HTML a s **absolutními cestami k souboru**. 
+
+**Pokud používáte defaultní úzký sloupec a chcete, aby byla nějaká vizualizace široká, stačí ji uzavřít do pseudotagů `<wide> </wide>`.**
 
 ## Buildování
 Celý článek buildnete příkazem

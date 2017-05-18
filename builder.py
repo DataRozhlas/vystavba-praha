@@ -1,14 +1,14 @@
 
 # coding: utf-8
 
-# In[112]:
+# In[84]:
 
 import markdown, re, os, yaml
 from jsmin import jsmin
 from csscompressor import compress
 
 
-# In[113]:
+# In[85]:
 
 # read markdown article
 with open('article.md', encoding='utf-8') as text:
@@ -17,19 +17,19 @@ with open('article.md', encoding='utf-8') as text:
     main = parts[1]
 
 
-# In[114]:
+# In[86]:
 
 art = yaml.load(header)
 
 
-# In[115]:
+# In[87]:
 
 #names of authors
 tmp = ', '.join(art['authors'])
 art['authors'] = ' a '.join(tmp.rsplit(', ', 1))
 
 
-# In[116]:
+# In[88]:
 
 # format external JS links
 tmp = ''
@@ -38,7 +38,7 @@ for lib in art['libraries']:
 art['libraries'] = tmp
 
 
-# In[117]:
+# In[89]:
 
 # format external CSS links 
 tmp = ''
@@ -47,40 +47,47 @@ for style in art['styles']:
 art['styles'] = tmp
 
 
-# In[118]:
+# In[90]:
+
+#<wide> pseudotag
+main = main.replace("<wide>","</div><div class=\"row-main row-main--article\">")
+main = main.replace("</wide>","</div><div class=\"row-main row-main--narrow\">")
+
+
+# In[91]:
 
 # article content
 art['content'] = markdown.markdown(main)
 
 
-# In[119]:
+# In[92]:
 
 #read snowfall template
 with open('./templates/snowfall.html', encoding='utf-8') as t:
     template = t.read()
 
 
-# In[127]:
+# In[93]:
 
 #read options
 options = art['options'].split(", ")
 
 
-# In[121]:
+# In[94]:
 
 #option: wide
 if "wide" in options: art['column'] = "<div class=\"row-main row-main--article\">"
 else: art['column'] = "<div class=\"row-main row-main--narrow\">"
 
 
-# In[122]:
+# In[99]:
 
 # fill template
 for variable in re.findall(r"\{(\w+)\}", template):
     template = template.replace('{' + variable + '}', str(art[variable]))
 
 
-# In[123]:
+# In[76]:
 
 # pack JSscripts
 temp = ''
@@ -92,7 +99,7 @@ for script in os.listdir('./js/'):
 template = template + '<script>' + temp + '</script>\n' 
 
 
-# In[124]:
+# In[77]:
 
 # pack styles
 temp = ''
@@ -104,14 +111,14 @@ for style in os.listdir('./styles/'):
 template = '<style>' + temp + '</style>\n' + template
 
 
-# In[125]:
+# In[97]:
 
 #write template
 with open('./output.html', 'w', encoding='utf-8') as f:
     f.write(template)
 
 
-# In[126]:
+# In[98]:
 
 # write wrapped content into dummy index
 with open('./templates/wrapper.html', encoding='utf-8') as t:
