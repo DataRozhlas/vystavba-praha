@@ -1,14 +1,16 @@
 
 # coding: utf-8
 
-# In[84]:
+# In[56]:
+
 
 import markdown, re, os, yaml
 from jsmin import jsmin
 from csscompressor import compress
 
 
-# In[85]:
+# In[57]:
+
 
 # read markdown article
 with open('article.md', encoding='utf-8') as text:
@@ -17,19 +19,29 @@ with open('article.md', encoding='utf-8') as text:
     main = parts[1]
 
 
-# In[86]:
+# In[58]:
+
 
 art = yaml.load(header)
 
 
-# In[87]:
+# In[59]:
+
+
+#read options
+options = art['options'].split(", ")
+
+
+# In[60]:
+
 
 #names of authors
 tmp = ', '.join(art['authors'])
 art['authors'] = ' a '.join(tmp.rsplit(', ', 1))
 
 
-# In[88]:
+# In[61]:
+
 
 # format external JS links
 tmp = ''
@@ -38,7 +50,8 @@ for lib in art['libraries']:
 art['libraries'] = tmp
 
 
-# In[89]:
+# In[62]:
+
 
 # format external CSS links 
 tmp = ''
@@ -47,47 +60,49 @@ for style in art['styles']:
 art['styles'] = tmp
 
 
-# In[90]:
+# In[63]:
+
 
 #<wide> pseudotag
 main = main.replace("<wide>","</div><div class=\"row-main row-main--article\">")
 main = main.replace("</wide>","</div><div class=\"row-main row-main--narrow\">")
 
 
-# In[91]:
+# In[64]:
+
 
 # article content
 art['content'] = markdown.markdown(main)
 
 
-# In[92]:
+# In[65]:
+
 
 #read snowfall template
-with open('./templates/snowfall.html', encoding='utf-8') as t:
+if "noheader" in options: template_file = './templates/snowfall_noheader.html'
+else: template_file = './templates/snowfall.html'
+with open(template_file, encoding='utf-8') as t:
     template = t.read()
 
 
-# In[93]:
+# In[66]:
 
-#read options
-options = art['options'].split(", ")
-
-
-# In[94]:
 
 #option: wide
 if "wide" in options: art['column'] = "<div class=\"row-main row-main--article\">"
 else: art['column'] = "<div class=\"row-main row-main--narrow\">"
 
 
-# In[99]:
+# In[67]:
+
 
 # fill template
 for variable in re.findall(r"\{(\w+)\}", template):
     template = template.replace('{' + variable + '}', str(art[variable]))
 
 
-# In[76]:
+# In[68]:
+
 
 # pack JSscripts
 temp = ''
@@ -99,7 +114,8 @@ for script in os.listdir('./js/'):
 template = template + '<script>' + temp + '</script>\n' 
 
 
-# In[77]:
+# In[69]:
+
 
 # pack styles
 temp = ''
@@ -111,14 +127,16 @@ for style in os.listdir('./styles/'):
 template = '<style>' + temp + '</style>\n' + template
 
 
-# In[97]:
+# In[70]:
+
 
 #write template
 with open('./output.html', 'w', encoding='utf-8') as f:
     f.write(template)
 
 
-# In[98]:
+# In[71]:
+
 
 # write wrapped content into dummy index
 with open('./templates/wrapper.html', encoding='utf-8') as t:
