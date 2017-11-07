@@ -54,7 +54,7 @@ V hlavičce jsou tyto podporované proměnné. Pokud není napsáno jinak, jsou 
 - `published` Datum vydání.
 - `coverimg` Odkaz na webově dosažitelný uvodní velkoobrázek. Co největší, při prvním buildu se vygenerují potřebné zmenšeniny.
 - `coverimg_note` Popisek k velkoobrázku (s možnou atribucí).
-- `libraries` pole požadovaných externích knihoven. Je nutné vložit celou URL na knihovnu, nedoporučuju ale odkazovat knihovny na cizích serverech, v každém případě cíl musí být na https.
+- `libraries` pole požadovaných externích knihoven. Knihovny, které se dají vložit jednoslovně: `jquery`. Jinak je nutné vložit celou URL na knihovnu.
 - `styles` pole požadovaných externích stylů, píše se celá URL, např. `styles: [https://js.arcgis.com/3.17/esri/css/esri.css]`. Opět příliš nedoporučuju odkazovat na cizí servery a opět cíl musí být na https.
 - **Vlastní JS skripty vkládejte do složky `js`, CSS styly do složky `styles`. Přikompilují se pak automaticky.**
 - `options` pro různé přepínače. Oddělují se čárkou a mezerou: `option1, option2, ...` Možnosti: `wide` nastaví široký textový sloupec pro celý článek, `noheader` odstraní gigantickou hlavičku.
