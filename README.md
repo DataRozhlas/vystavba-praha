@@ -64,6 +64,8 @@ Obsah se píše v [Markdownu](https://github.com/adam-p/markdown-here/wiki/Markd
 
 Různé interaktivity a obrázky se vkládají přes čisté HTML a s **absolutními cestami k souboru**. 
 
+Můžete využívat také postranní boxíky - vkládají se přes pseudotagy `<left> </left>`, případně `<right> </right>`.
+
 **Pokud používáte defaultní úzký sloupec a chcete, aby byla nějaká vizualizace široká, stačí ji uzavřít do pseudotagů `<wide> </wide>`.**
 
 ## Buildování
