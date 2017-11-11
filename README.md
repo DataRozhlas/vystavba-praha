@@ -57,7 +57,7 @@ V hlavičce jsou tyto podporované proměnné. Pokud není napsáno jinak, jsou 
 - `libraries` pole požadovaných externích knihoven. Knihovny, které se dají vložit jednoslovně: `jquery`. Jinak je nutné vložit celou URL na knihovnu.
 - `styles` pole požadovaných externích stylů, píše se celá URL, např. `styles: [https://js.arcgis.com/3.17/esri/css/esri.css]`. Opět příliš nedoporučuju odkazovat na cizí servery a opět cíl musí být na https.
 - **Vlastní JS skripty vkládejte do složky `js`, CSS styly do složky `styles`. Přikompilují se pak automaticky.**
-- `options` pro různé přepínače. Oddělují se čárkou a mezerou: `option1, option2, ...` Možnosti: `wide` nastaví široký textový sloupec pro celý článek, `noheader` odstraní gigantickou hlavičku.
+- `options` pro různé přepínače. Oddělují se čárkou a mezerou: `option1, option2, ...` Možnosti: `wide` nastaví široký textový sloupec pro celý článek, `noheader` odstraní gigantickou hlavičku, `noheader, nopic` navíc umožní nemít otevírací obrázek vůbec.
 
 ### Obsah
 Obsah se píše v [Markdownu](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). Ne všechny prvky jsou nastylovány z výroby, pokud vám nějaký bude scházet, dejte vědět.
