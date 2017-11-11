@@ -53,14 +53,22 @@ art['content'] = markdown.markdown(main)
 
 
 #read snowfall template
-if "noheader" in options: template_file = './templates/snowfall_noheader.html'
-else: template_file = './templates/snowfall.html'
+if "noheader" in options: 
+    template_file = './templates/snowfall_noheader.html'
+    if "nopic" in options:
+        art['mainphoto'] = ""
+    else:
+        art['mainphoto'] = '<figure class="b-detail__img"><img src="' + art['coverimg'] + '" width="100%" /><figcaption>' + art['coverimg_note'] + '</figcaption></figure>'
+else: 
+    template_file = './templates/snowfall.html'
 with open(template_file) as t:
     template = t.read()
 
 # option: wide
-if "wide" in options: art['column'] = "<div class=\"row-main row-main--article\">"
-else: art['column'] = "<div class=\"row-main row-main--narrow\">"
+if "wide" in options: 
+    art['column'] = "<div class=\"row-main row-main--article\">"
+else:
+    art['column'] = "<div class=\"row-main row-main--narrow\">"
 
 # fill template
 for variable in re.findall(r"\{(\w+)\}", template):
