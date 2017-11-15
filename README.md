@@ -21,10 +21,10 @@ git clone git@bitbucket.org:samizdatcz/snowfall-builder.git jmeno-projektu
 git remote remove origin
 ```
 
-- Vytvoříme pro projekt nové repo. `smzd create` sám rovnou nastaví správný nový remote
+- Vytvoříme pro projekt nové repo. `smzd create` (viz [Samizdat Bitbucket Manager](https://bitbucket.org/samizdatcz/samizdat-bitbucket-manager/)) sám rovnou nastaví správný nový remote
 
 ```bash
-smzd add jmeno-projektu
+smzd create jmeno-projektu
 ```
 
 - To je celé! Teď už se můžeme vrhnout na psaní článku.
