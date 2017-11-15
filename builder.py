@@ -61,7 +61,7 @@ if "noheader" in options:
         art['mainphoto'] = '<figure class="b-detail__img"><img src="' + art['coverimg'] + '" width="100%" /><figcaption>' + art['coverimg_note'] + '</figcaption></figure>'
 else: 
     template_file = './templates/snowfall.html'
-with open(template_file) as t:
+with open(template_file, encoding='utf-8') as t:
     template = t.read()
 
 # option: wide
@@ -77,7 +77,7 @@ for variable in re.findall(r"\{(\w+)\}", template):
 # pack JSscripts
 temp = ''
 for script in os.listdir('./js/'):
-    with open('./js/' + script) as js_file:
+    with open('./js/' + script, encoding='utf-8') as js_file:
         jmin = jsmin(js_file.read())
         temp += jmin
 
@@ -86,22 +86,22 @@ template = template + '<script>' + temp + '</script>\n'
 # pack styles
 temp = ''
 for style in os.listdir('./styles/'):
-    with open('./styles/' + style) as css_file:
+    with open('./styles/' + style, encoding='utf-8') as css_file:
         csmin = compress(css_file.read())
         temp += csmin
 
 template = '<style>' + temp + '</style>\n' + template
 
 # write template
-with open('./output.html', 'w') as f:
+with open('./output.html', 'w', encoding='utf-8') as f:
     f.write(template)
 
 # write wrapped content into dummy index
-with open('./templates/wrapper.html') as t:
+with open('./templates/wrapper.html', encoding='utf-8') as t:
     wrapper = t.read()
     
 wrapper = wrapper.replace('{content}', template)
 
-with open('./index.html', 'w') as f:
+with open('./index.html', 'w', encoding='utf-8') as f:
     f.write(wrapper)
 
