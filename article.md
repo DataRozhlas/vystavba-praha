@@ -6,7 +6,7 @@ coverimg: https://interaktivni.rozhlas.cz/brexit/media/cover.jpg
 coverimg_note: "Foto <a href='#'>ČTK</a>"
 styles: []
 libraries: [] #jquery
-options: "" #wide, noheader (+nopic)
+options: "noheader" #wide, noheader (+nopic)
 ---
 <left>
 	<p>
