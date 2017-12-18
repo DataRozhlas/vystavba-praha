@@ -70,6 +70,15 @@ if "wide" in options:
 else:
     art['column'] = "<div class=\"row-main row-main--narrow\">"
 
+# pack styles
+temp = ''
+for style in os.listdir('./styles/'):
+    with open('./styles/' + style, encoding='utf-8') as css_file:
+        csmin = compress(css_file.read())
+        temp += csmin
+
+art['styles'] = art['styles'] + "<style>"+ temp + "</style>"
+
 # fill template
 for variable in re.findall(r"\{(\w+)\}", template):
     template = template.replace('{' + variable + '}', str(art[variable]))
@@ -83,15 +92,6 @@ for script in os.listdir('./js/'):
 
 template = template + '<script>' + temp + '</script>\n' 
 
-# pack styles
-temp = ''
-for style in os.listdir('./styles/'):
-    with open('./styles/' + style, encoding='utf-8') as css_file:
-        csmin = compress(css_file.read())
-        temp += csmin
-
-template = '<style>' + temp + '</style>\n' + template
-
 # write template
 with open('./output.html', 'w', encoding='utf-8') as f:
     f.write(template)
@@ -104,4 +104,3 @@ wrapper = wrapper.replace('{content}', template)
 
 with open('./index.html', 'w', encoding='utf-8') as f:
     f.write(wrapper)
-
