@@ -73,9 +73,10 @@ else:
 # pack styles
 temp = ''
 for style in os.listdir('./styles/'):
-    with open('./styles/' + style, encoding='utf-8') as css_file:
-        csmin = compress(css_file.read())
-        temp += csmin
+    if style[-3:] == "css":
+        with open('./styles/' + style, encoding='utf-8') as css_file:
+            csmin = compress(css_file.read())
+            temp += csmin
 
 art['styles'] = art['styles'] + "<style>"+ temp + "</style>"
 
@@ -86,9 +87,10 @@ for variable in re.findall(r"\{(\w+)\}", template):
 # pack JSscripts
 temp = ''
 for script in os.listdir('./js/'):
-    with open('./js/' + script, encoding='utf-8') as js_file:
-        jmin = jsmin(js_file.read())
-        temp += jmin
+    if script[-2:] == "js":
+        with open('./js/' + script, encoding='utf-8') as js_file:
+            jmin = jsmin(js_file.read())
+            temp += jmin
 
 template = template + '<script>' + temp + '</script>\n' 
 
