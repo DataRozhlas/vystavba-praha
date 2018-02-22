@@ -22,14 +22,15 @@ styleout = ''
 libraries = {'jquery': 'https://code.jquery.com/jquery-3.3.1.min.js',
              'jquery-csv': 'https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.min.js',
              'highcharts': 'https://code.highcharts.com/highcharts.js',
-             'datatables': '//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js',
              'd3': 'https://d3js.org/d3.v5.min.js'}
 
 for lib in art['libraries']:
     if lib == 'datatables':
+        libout += '<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>\n'
         libout += '<script src="https://cdn.datatables.net/responsive/2.2.1/js/dataTables.responsive.min.js"></script>\n'
         styleout += '<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">\n'
         styleout += '<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.1/css/responsive.dataTables.min.css">\n'
+        continue 
 
     if lib in libraries:
         lib = libraries[lib]
