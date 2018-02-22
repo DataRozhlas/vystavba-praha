@@ -26,12 +26,14 @@ libraries = {'jquery': 'https://code.jquery.com/jquery-3.3.1.min.js',
              'd3': 'https://d3js.org/d3.v5.min.js'}
 
 for lib in art['libraries']:
-    if lib in libraries: lib = libraries[lib]
-    libout += '<script src="{0}"></script>\n'.format(lib)
     if lib == 'datatables':
         libout += '<script src="https://cdn.datatables.net/responsive/2.2.1/js/dataTables.responsive.min.js"></script>\n'
         styleout += '<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">\n'
         styleout += '<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.1/css/responsive.dataTables.min.css">\n'
+
+    if lib in libraries:
+        lib = libraries[lib]
+    libout += '<script src="{0}"></script>\n'.format(lib)
 art['libraries'] = libout
 
 
