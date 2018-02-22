@@ -5,8 +5,8 @@ published: "21. dubna 2017"
 coverimg: https://interaktivni.rozhlas.cz/brexit/media/cover.jpg
 coverimg_note: "Foto <a href='#'>ČTK</a>"
 styles: []
-libraries: [] #jquery
-options: "noheader" #wide, noheader (+nopic)
+libraries: [] #jquery, jquery-csv, d3, highcharts, datatables
+options: [noheader] #wide, noheader (, nopic)
 ---
 <left>
 	<p>
