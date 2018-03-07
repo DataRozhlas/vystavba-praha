@@ -10,11 +10,6 @@ with open('article.md', encoding='utf-8') as text:
 
 art = yaml.load(header)
 
-#names of authors
-tmp = ', '.join(art['authors'])
-art['authors'] = ' a '.join(tmp.rsplit(', ', 1))
-
-
 # format external JS links
 libout = ''
 styleout = ''

@@ -40,17 +40,16 @@ title: "Nejrelativnější článek"
 ---
 ```
 
-YAML umí i pole, to se používá u seznamu autorů. To se píše jako ve většině programovacích jazyků
+YAML umí i pole, to se používá u seznamu knihoven apod. To se píše jako ve většině programovacích jazyků
 
 ```yaml
-authors: ["Jan Boček", "Jiří Hošek", "Jan Cibulka", "Marcel Šulek"]
+libraries: [jquery, highcharts]
 ```
 
 V hlavičce jsou tyto podporované proměnné. Pokud není napsáno jinak, jsou povinné.
 
 - `title` Nadpis článku.
 - `perex` Perex.
-- `authors` Seznam autorů.
 - `published` Datum vydání.
 - `coverimg` Odkaz na webově dosažitelný uvodní velkoobrázek. Co největší, při prvním buildu se vygenerují potřebné zmenšeniny.
 - `coverimg_note` Popisek k velkoobrázku (s možnou atribucí).
@@ -58,6 +57,8 @@ V hlavičce jsou tyto podporované proměnné. Pokud není napsáno jinak, jsou 
 - `styles` pole požadovaných externích stylů, píše se celá URL, např. `styles: [https://js.arcgis.com/3.17/esri/css/esri.css]`. Cíl musí být na https.
 - **Vlastní JS skripty vkládejte do složky `js`, CSS styly do složky `styles`. Přikompilují se pak automaticky.**
 - `options` pole pro různé přepínače. Možnosti: `wide` nastaví široký textový sloupec pro celý článek, `noheader` odstraní gigantickou hlavičku, `noheader, nopic` navíc umožní nemít otevírací obrázek vůbec.
+
+Autoři se zadávají až v redakčním systému.
 
 ### Obsah
 Obsah se píše v [Markdownu](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). Ne všechny prvky jsou nastylovány z výroby, pokud vám nějaký bude scházet, dejte vědět.
