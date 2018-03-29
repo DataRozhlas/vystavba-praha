@@ -1,3 +1,13 @@
 /*
 CSS soubory ve složce /styles/ se do výsledného článku zakompilují automaticky
 */
+
+/* override nesmyslných stylů v redakčním systému */
+
+li {
+    background: none !important;
+}
+
+hr {
+    max-width: none !important;
+}
