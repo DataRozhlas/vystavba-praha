@@ -92,7 +92,7 @@ for script in os.listdir('./js/'):
     if script[-2:] == "js":
         with open('./js/' + script, encoding='utf-8') as js_file:
             jmin = jsmin(js_file.read())
-            temp += jmin
+            temp += '\n' + jmin
 
 template = template + '<script>' + temp + '</script>\n' 
 
