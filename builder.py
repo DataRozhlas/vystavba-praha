@@ -17,7 +17,8 @@ styleout = ''
 libraries = {'jquery': 'https://code.jquery.com/jquery-3.3.1.min.js',
              'jquery-csv': 'https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.min.js',
              'highcharts': 'https://code.highcharts.com/highcharts.js',
-             'd3': 'https://d3js.org/d3.v5.min.js'}
+             'd3': 'https://d3js.org/d3.v3.min.js',
+             'd3v5': 'https://d3js.org/d3.v5.min.js'}
 
 for lib in art['libraries']:
     if lib == 'datatables':
