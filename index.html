@@ -204,6 +204,8 @@
 		<main id="main" class="main" role="main">	
 		<article role="article" class="b-data"> 			
 			<div class="b-data__content" id="content">
+<script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+<script src="https://d3js.org/d3-fetch.v1.min.js"></script>
 
 <script type="text/javascript">document.getElementsByTagName('article')[0].classList.add('b-data--no-img');</script>
 <style>li{background:none !important}hr{max-width:none !important}</style>
@@ -234,6 +236,10 @@ Data z mobilů:<br>Praha se denně nafoukne o polovinu, v centru jsou návštěv
     </p>
 </div></div></div></div>
 
+<script type="text/javascript">
+    d3.csv("https://dev.datarozhlas.cz/maturity-2018/data/kraj/zl.csv").then(function(data) {console.log(data)});
+</script>
+
 <p>Během dne se lidé v Praze soustřeďují v okolí administrativních center a obchodů, po poledni se tak nejvíc zahustí okolí Andělu, centrum Prahy (Vodičkova ulice a Petrské náměstí) a Brumlovka nedaleko Budějovické. Na poslední jmenované adrese sídlí řada velkých korporací, mezi nimi i Microsoft nebo ČEZ. Pro srovnání, na zmíněných místech je ve „špičce“ okolo šesti stovek osob na jeden hektar, průměr Prahy je 25 obyvatel na <a href="https://cs.wikipedia.org/wiki/Hektar">hektar</a> (Václavské náměstí má rozlohu asi 4 hektary).</p>
 <p>Naopak v noci se nejvíc lidí se „namačká“ ve Vršovicích, jde o 430 osob na hektar.</p>
 <p>Detaily si můžete prohlédnout v následující mapě, kterou z dat mobilních operátorů zpracoval pražský <a href="http://www.iprpraha.cz/">Institut plánování a rozvoje</a>.</p>
@@ -259,7 +265,8 @@ Data z mobilů:<br>Praha se denně nafoukne o polovinu, v centru jsou návštěv
 </article>
 </div>
 </div>
-</div><script></script>
+</div><script>
+</script>
 
 		</article>
 			<div class="wrapper">

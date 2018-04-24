@@ -7,30 +7,30 @@ Je třeba [Python 3](https://www.python.org/downloads/) a nainstalované knihovn
 
 ## Nový článek
 
-Jelikož si každý projekt nese dost "svého" bince, je vhodné pro každý článek založit separátní repozitář. Je tedy nutné si stáhnout (nebo naklonovat) šablonu a nastavit jí gitový *remote* na nový repozitář.
+Jelikož si každý projekt nese dost "svého" bince, je vhodné pro každý článek založit separátní repozitář. K tomu slouží skript v Pythonu [smzd.py](https://github.com/DataRozhlas/deploy-tools). Stáhneme do pracovní složky `smzd.py` a `creds_sample.py`, do druhého jmenovaného vyplníme naše údaje z GitHubu a přejmenujeme na `creds.py`. Když pak spustíme `smzd.py`, můžeme si vybrat z nabízených možností:
 
-- Naklonujeme repo do nového adresáře
+- Nový projekt: vytvoří složku s naklonovaným builderem
 
 ```bash
-git clone git@bitbucket.org:samizdatcz/snowfall-builder.git jmeno-projektu
+smzd.py add nazev-projektu
 ```
 
-- Odstraníme současný remote (vedoucí na šablonu)
+- Nový projekt: vytvoří prázdnou složku
 
 ```bash
-git remote remove origin
+smzd.py addempty nazev-projektu
 ```
 
-- Vytvoříme pro projekt nové repo. `smzd create` (viz [Samizdat Bitbucket Manager](https://bitbucket.org/samizdatcz/samizdat-bitbucket-manager/)) sám rovnou nastaví správný nový remote
+- Naklonování projektu z GitHubu
 
 ```bash
-smzd create jmeno-projektu
+smzd.py clone nazev-projektu
 ```
 
 - To je celé! Teď už se můžeme vrhnout na psaní článku.
 
 ## Psaní článku
-Celý neinteraktivní obsah se nastavuje v souboru `article.md`. Skládá se, podobně jako [Jekyll](https://jekyllrb.com/docs/frontmatter/), ze dvou částí: hlavičky a obsahu.
+Celý neinteraktivní obsah se nastavuje v souboru `article.md`. Skládá se ze dvou částí: hlavičky a obsahu.
 
 ### Hlavička
 Hlavička je ukončena třemi spojovníky: `---`, uvnitř se používá YAML. Každá proměnná je na novém řádku, její název je to, co je před dvojtečkou a mezerou a obsah to, co je za ní. Textový obsah (pokud to není pole) se dává do uvozovek. Uvozovky v hlavičce je nejlepší řešit typografickými uvozovkami.
@@ -53,17 +53,17 @@ V hlavičce jsou tyto podporované proměnné. Pokud není napsáno jinak, jsou 
 - `published` Datum vydání.
 - `coverimg` Odkaz na webově dosažitelný uvodní velkoobrázek. Co největší, při prvním buildu se vygenerují potřebné zmenšeniny.
 - `coverimg_note` Popisek k velkoobrázku (s možnou atribucí).
-- `libraries` pole požadovaných externích knihoven. Knihovny, které se dají vložit jednoslovně: `jquery, jquery-csv, d3, highcharts, datatables` (k DataTables se přidají i styly a responzivita). Jinak je nutné vložit celou URL na knihovnu.
+- `libraries` pole požadovaných externích knihoven. Knihovny, které se dají vložit jednoslovně: `jquery, d3, d3csv, highcharts, datatables` (k DataTables se přidají i styly a responzivita). Jinak je nutné vložit celou URL na knihovnu.
 - `styles` pole požadovaných externích stylů, píše se celá URL, např. `styles: [https://js.arcgis.com/3.17/esri/css/esri.css]`. Cíl musí být na https.
 - **Vlastní JS skripty vkládejte do složky `js`, CSS styly do složky `styles`. Přikompilují se pak automaticky.**
 - `options` pole pro různé přepínače. Možnosti: `wide` nastaví široký textový sloupec pro celý článek, `noheader` odstraní gigantickou hlavičku, `noheader, nopic` navíc umožní nemít otevírací obrázek vůbec.
 
-Autoři se zadávají až v redakčním systému.
+Ostatní údaje se zadávají a přímo v redakčním systému.
 
 ### Obsah
-Obsah se píše v [Markdownu](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). Ne všechny prvky jsou nastylovány z výroby, pokud vám nějaký bude scházet, dejte vědět.
+Obsah se píše v [Markdownu](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet), je možné používat i běžné HTML. 
 
-Různé interaktivity a obrázky se vkládají přes čisté HTML a s **absolutními cestami k souboru**. 
+Různé interaktivity a obrázky se vkládají přes čisté HTML a s **absolutními cestami k souboru**. Soubory je třeba napřed dostat na server pomocí pushnutí na GitHub. Pokud máme v repozitáři třeba soubor `data.csv` ve složce `files`, po pushnutí ho najdeme na `dev.datarozhlas.cz/nazev-projektu/files/data.csv`. 
 
 Můžete využívat také postranní boxíky - vkládají se přes pseudotagy `<left> </left>`, případně `<right> </right>`.
 
@@ -77,4 +77,6 @@ python builder.py
 
 Build vytvoří `output.html`, jehož obsah následně vrazíte do hlavní položky ve snowfall šabloně. Také vytvoří náhledový `index.html` pro kontrolu. Pokud ho kopírujete a zobrazujete z jiné složky, je spolu s ním nutné zkopírovat i složky `fonts` a `wrapper_files`.
 
-Pokud potřebujete nahrát nejrůznější obrázky, vkládejte je do složky media, objeví se na adrese `interaktivni.rozhlas.cz/data/jmeno-projektu/media/SOUBOR`.
+## Kontrola na serveru
+
+Po pushnutí na GitHub článek najdete na adrese `dev.datarozhlas.cz/nazev-projektu`.
