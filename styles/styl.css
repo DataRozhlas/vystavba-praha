@@ -8,6 +8,10 @@ li {
     background: none !important;
 }
 
+ul, ol {
+    list-style: initial !important;
+}
+
 hr {
     max-width: none !important;
 }
