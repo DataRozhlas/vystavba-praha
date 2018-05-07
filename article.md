@@ -14,3 +14,5 @@ options: [noheader, nopic] #wide, noheader (, nopic)
 
 * IPR: v Praze se málo staví
 * mapa nám to potvrzuje
+* na Praze 7 od roku 2012 jen 11 nových domů, na Praze 1 13
+* nejvíce se staví na Praze 10: "Vršovice, část Vinohrad, převážná část Strašnic, převážná část Malešic, větší část Záběhlic, část Michle (vrch Bohdalec)"
