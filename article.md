@@ -6,7 +6,7 @@ coverimg_note: "Foto <a href='#'>ČTK</a>"
 styles: []
 # snadné načítání csv: d3csv v libraries, d3.csv("soubor.csv").then(function(data){} ) v kódu
 libraries: [] #jquery, d3, d3v5, d3csv, highcharts, datatables
-options: [noheader] #wide, noheader (, nopic)
+options: [noheader, nopic] #wide, noheader (, nopic)
 ---
 <wide>
 <iframe src="https://dev.datarozhlas.cz/nove-domy-map/" width="100%" style="height: 75vh;" frameborder=0></iframe>
