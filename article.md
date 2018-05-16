@@ -12,7 +12,7 @@ options: [noheader, nopic] #wide, noheader (, nopic)
 <iframe src="https://dev.datarozhlas.cz/nove-domy-map/" width="100%" style="height: 75vh;" frameborder=0></iframe>
 </wide>
 
-* IPR: v Praze se málo staví
-* mapa nám to potvrzuje
 * na Praze 7 od roku 2012 jen 11 nových domů, na Praze 1 13
-* nejvíce se staví na Praze 10: "Vršovice, část Vinohrad, převážná část Strašnic, převážná část Malešic, větší část Záběhlic, část Michle (vrch Bohdalec)"
+* nejvíce se staví na Praze 10: "Vršovice, část Vinohrad, převážná část Strašnic, převážná část Malešic, větší část Záběhlic, část Michle (vrch Bohdalec)" - kde tam? je to kvůli tomu, že je ta MČ velká?
+* na levém břehu se staví míň než na pravém (postaveno 1670 x 4113 nemovitostí)
+* celkově nejvíce rodinných (3759) a bytových domů (711) - staví se spíše v satelitech, nebo uvnitř Prahy?
