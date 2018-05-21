@@ -12,7 +12,7 @@ Jak se v hlavním městě stavělo v posledních letech, ukazuje následující 
 
 <wide>
 <iframe src="https://dev.datarozhlas.cz/nove-domy-map/" width="100%" style="height: 80vh;" frameborder=0></iframe>
-<div id="posunko"><small><i>Zdrojem dat o výstavbě v Praze a blízkém okolí je registr <a href="https://www.cuzk.cz/ruian/RUIAN.aspx">RÚIAN</a>. Mapa nemusí být stoprocentně přesná: u některých budov v registru chybí jejich obrysy, takže do mapy nemohly být zakresleny; na druhou stranou mohou být jako nové zakreslené i různé nástavby na stavávající nemovitosti.</i></small></div>
+<div id="posunko"><small><i>Zdrojem dat o výstavbě v Praze a blízkém okolí je registr <a href="https://www.cuzk.cz/ruian/RUIAN.aspx">RÚIAN</a>. Mapa nemusí být stoprocentně přesná: u některých budov v registru chybí jejich obrysy, takže do mapy nemohly být zakresleny; mohou také chybět stavby, které ještě nebyly zkolaudovány. Na druhou stranou mohou být jako nové zakreslené i různé nástavby na stávající nemovitosti.</i></small></div>
 </wide>
 
 Z mapy na první pohled vystupují rozlehlé sklady, výrobní haly a obchodní centra na okrajích hlavního města – v Horních Počernicích a na Černém mostě, v Jirnech, ve Zdibech, v Rudné či v Říčanech.
