@@ -12,6 +12,7 @@ V centru se moc nestaví, staví se hlavně na periferiích. Kritizuje to IPR (n
 
 metoda: u některých budouv v rúianu chybí obrysy, takže se nemohly zakreslit; na druhé straně mohou být jako nové zakreslené i nástavby.
 
+test pro cíbu 
 <wide>
 <iframe src="https://dev.datarozhlas.cz/nove-domy-map/" width="100%" style="height: 75vh;" frameborder=0></iframe>
 </wide>
