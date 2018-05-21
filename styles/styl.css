@@ -15,3 +15,7 @@ ul, ol {
 hr {
     max-width: none !important;
 }
+
+td:first-child {
+    font-weight: bold;
+}
