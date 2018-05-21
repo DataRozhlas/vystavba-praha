@@ -8,48 +8,20 @@ libraries: [jquery, highcharts, datatables] #jquery, d3, d3v5, d3csv, highcharts
 options: [noheader, nopic] #wide, noheader (, nopic)
 ---
 
-V centru se moc nestaví, staví se hlavně na periferiích. Kritizuje to IPR (nějaká citacička z jejich materiálů). Pokud vás zajímá, kde staví, máme tady k tomu mapu, která ukazuje výstavbu od roku 2012. Můžete si v ní vyhledat něco vyhledávátkem.
+Výstavbu v Praze řeší aktuálně projednávaný [Metropolitní plán](http://plan.iprpraha.cz/cs/metropolitni-plan). Podle plánů jeho projektanta, Institutu plánování a rozvoje (IPR), má „zastavit nekontrolované rozpínání zástavby do polí stanovením jasné hranice mezi městem a krajinou“. Praha se podle IPR nemá rozšiřovat, ale zahušťovat, například zastavováním takzvaných brownfieldů - „městské džungle“.
 
-metoda: u některých budouv v rúianu chybí obrysy, takže se nemohly zakreslit; na druhé straně mohou být jako nové zakreslené i nástavby.
+Jak se v hlavním městě stavělo v posledních letech, ukazuje následující mapa. Červeně jsou na ní vyznačeny domy postavené po roce 2012, modře ty starší. Je z ní patrné zastavovaní periferií a k Praze přidružených obcí.
 
-test pro cíbu 
 <wide>
-<iframe src="https://dev.datarozhlas.cz/nove-domy-map/" width="100%" style="height: 75vh;" frameborder=0></iframe>
+<iframe src="https://dev.datarozhlas.cz/nove-domy-map/" width="100%" style="height: 80vh;" frameborder=0></iframe>
 </wide>
+<div id="posunko"><i>Zdrojem dat je registr <a href="https://www.cuzk.cz/ruian/RUIAN.aspx">RÚIAN</a>. Mapa nemusí být stoprocentně přesná: u některých budov v registru chybí jejich obrysy, takže do mapy nemohly být zakresleny; na druhou stranou mohou být jako nové zakreslené i různé nástavby na stavávající nemovitosti.</i></div>
 
-Výstavba zrychluje, loni se postavilo 1148 věcí.
+Výstavba od roku 2012 setrvale zrychluje. Loni se na území Prahy postavilo 1148 nemovitostí. V hlavním městě se však [čeká na výstavbu desítek tisíc bytů](https://www.irozhlas.cz/ekonomika/praha-byty-vystavba-povoleni_1712171713_mos).
 
 <div id="graf"></div>
 
 Vůbec nejmíň se staví na Praze 7, nejvíc na Praze 10. 
-
-<table id="tabulka" class="display" style="width:100%">
-<thead>
-<tr><th>Typ nemovitosti</th><th>Počet</th></tr>
-</thead>
-<tbody>
-<tr><td>rodinný dům</td><td>3759</td></tr>
-<tr><td>bytový dům</td><td>711</td></tr>
-<tr><td>garáž</td><td>478</td></tr>
-<tr><td>jiná stavba</td><td>212</td></tr>
-<tr><td>víceúčelová stavba</td><td>114</td></tr>
-<tr><td>stavba pro administrativu</td><td>97</td></tr>
-<tr><td>stavba občanského vybavení</td><td>92</td></tr>
-<tr><td>objekt k bydlení</td><td>79</td></tr>
-<tr><td>stavba pro obchod</td><td>59</td></tr>
-<tr><td>stavba pro rodinnou rekreaci</td><td>50</td></tr>
-<tr><td>stavba pro výrobu a skladování</td><td>49</td></tr>
-<tr><td>stavba technického vybavení</td><td>35</td></tr>
-<tr><td>objekt občanské vybavenosti</td><td>19</td></tr>
-<tr><td>stavba ubytovacího zařízení</td><td>15</td></tr>
-<tr><td>stavba pro dopravu</td><td>7</td></tr>
-<tr><td>zemědělská stavba</td><td>3</td></tr>
-<tr><td>průmyslový objekt</td><td>2</td></tr>
-<tr><td>skleník</td><td>2</td></tr>
-</tbody>
-</table>
-<br>
-Nejvíc se staví rodinných domů.
 
 <table id="tabulka2" class="display" style="width:100%">
 <thead>
@@ -115,6 +87,34 @@ Nejvíc se staví rodinných domů.
 <tr><td>Praha-Nedvězí</td><td>8</th></tr>
 </tbody>
 </table>
+<br>
 
+Nejvíc se staví rodinných domů.
+
+<table id="tabulka" class="display" style="width:100%">
+<thead>
+<tr><th>Typ nemovitosti</th><th>Počet</th></tr>
+</thead>
+<tbody>
+<tr><td>rodinný dům</td><td>3759</td></tr>
+<tr><td>bytový dům</td><td>711</td></tr>
+<tr><td>garáž</td><td>478</td></tr>
+<tr><td>jiná stavba</td><td>212</td></tr>
+<tr><td>víceúčelová stavba</td><td>114</td></tr>
+<tr><td>stavba pro administrativu</td><td>97</td></tr>
+<tr><td>stavba občanského vybavení</td><td>92</td></tr>
+<tr><td>objekt k bydlení</td><td>79</td></tr>
+<tr><td>stavba pro obchod</td><td>59</td></tr>
+<tr><td>stavba pro rodinnou rekreaci</td><td>50</td></tr>
+<tr><td>stavba pro výrobu a skladování</td><td>49</td></tr>
+<tr><td>stavba technického vybavení</td><td>35</td></tr>
+<tr><td>objekt občanské vybavenosti</td><td>19</td></tr>
+<tr><td>stavba ubytovacího zařízení</td><td>15</td></tr>
+<tr><td>stavba pro dopravu</td><td>7</td></tr>
+<tr><td>zemědělská stavba</td><td>3</td></tr>
+<tr><td>průmyslový objekt</td><td>2</td></tr>
+<tr><td>skleník</td><td>2</td></tr>
+</tbody>
+</table>
 
 Obecně se taky na levém břehu Vltavy staví míň než na pravém 1670 x 4113. Podle xx je to dáno metropolitním plánem: citace z repky.

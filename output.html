@@ -7,7 +7,7 @@
 <script type="text/javascript">document.getElementsByTagName('article')[0].classList.add('b-data--no-img');</script>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.1/css/responsive.dataTables.min.css">
-<style>li{background:none !important}ul,ol{list-style:initial !important}hr{max-width:none !important}td:first-child{font-weight:bold}</style>
+<style>li{background:none !important}ul,ol{list-style:initial !important}hr{max-width:none !important}td:first-child{font-weight:bold}@media only screen and (min-width:800px){#posunko{margin-top:-40px}}</style>
 <div class="row-main row-main--article">
 <h1 class="b-data__title b-data__title--sm">
 Uhříněves i Vršovice. Podívejte se, kde se v Praze staví
@@ -27,44 +27,16 @@ Uhříněves i Vršovice. Podívejte se, kde se v Praze staví
 
 
 
-<p>V centru se moc nestaví, staví se hlavně na periferiích. Kritizuje to IPR (nějaká citacička z jejich materiálů). Pokud vás zajímá, kde staví, máme tady k tomu mapu, která ukazuje výstavbu od roku 2012. Můžete si v ní vyhledat něco vyhledávátkem.</p>
-<p>metoda: u některých budouv v rúianu chybí obrysy, takže se nemohly zakreslit; na druhé straně mohou být jako nové zakreslené i nástavby.</p>
-<p>test pro cíbu 
-</div><div class="row-main row-main--article">
-<iframe src="https://dev.datarozhlas.cz/nove-domy-map/" width="100%" style="height: 75vh;" frameborder=0></iframe>
-</div><div class="row-main row-main--narrow"></p>
-<p>Výstavba zrychluje, loni se postavilo 1148 věcí.</p>
+<p>Výstavbu v Praze řeší aktuálně projednávaný <a href="http://plan.iprpraha.cz/cs/metropolitni-plan">Metropolitní plán</a>. Podle plánů jeho projektanta, Institutu plánování a rozvoje (IPR), má „zastavit nekontrolované rozpínání zástavby do polí stanovením jasné hranice mezi městem a krajinou“. Praha se podle IPR nemá rozšiřovat, ale zahušťovat, například zastavováním takzvaných brownfieldů - „městské džungle“.</p>
+<p>Jak se v hlavním městě stavělo v posledních letech, ukazuje následující mapa. Červeně jsou na ní vyznačeny domy postavené po roce 2012, modře ty starší. Je z ní patrné zastavovaní periferií a k Praze přidružených obcí.</p>
+<p></div><div class="row-main row-main--article">
+<iframe src="https://dev.datarozhlas.cz/nove-domy-map/" width="100%" style="height: 80vh;" frameborder=0></iframe>
+</div><div class="row-main row-main--narrow">
+<div id="posunko"><i>Zdrojem dat je registr <a href="https://www.cuzk.cz/ruian/RUIAN.aspx">RÚIAN</a>. Mapa nemusí být stoprocentně přesná: u některých budov v registru chybí jejich obrysy, takže do mapy nemohly být zakresleny; na druhou stranou mohou být jako nové zakreslené i různé nástavby na stavávající nemovitosti.</i></div></p>
+<p>Výstavba od roku 2012 setrvale zrychluje. Loni se na území Prahy postavilo 1148 nemovitostí. V hlavním městě se však <a href="https://www.irozhlas.cz/ekonomika/praha-byty-vystavba-povoleni_1712171713_mos">čeká na výstavbu desítek tisíc bytů</a>.</p>
 <div id="graf"></div>
 
 <p>Vůbec nejmíň se staví na Praze 7, nejvíc na Praze 10. </p>
-<table id="tabulka" class="display" style="width:100%">
-<thead>
-<tr><th>Typ nemovitosti</th><th>Počet</th></tr>
-</thead>
-<tbody>
-<tr><td>rodinný dům</td><td>3759</td></tr>
-<tr><td>bytový dům</td><td>711</td></tr>
-<tr><td>garáž</td><td>478</td></tr>
-<tr><td>jiná stavba</td><td>212</td></tr>
-<tr><td>víceúčelová stavba</td><td>114</td></tr>
-<tr><td>stavba pro administrativu</td><td>97</td></tr>
-<tr><td>stavba občanského vybavení</td><td>92</td></tr>
-<tr><td>objekt k bydlení</td><td>79</td></tr>
-<tr><td>stavba pro obchod</td><td>59</td></tr>
-<tr><td>stavba pro rodinnou rekreaci</td><td>50</td></tr>
-<tr><td>stavba pro výrobu a skladování</td><td>49</td></tr>
-<tr><td>stavba technického vybavení</td><td>35</td></tr>
-<tr><td>objekt občanské vybavenosti</td><td>19</td></tr>
-<tr><td>stavba ubytovacího zařízení</td><td>15</td></tr>
-<tr><td>stavba pro dopravu</td><td>7</td></tr>
-<tr><td>zemědělská stavba</td><td>3</td></tr>
-<tr><td>průmyslový objekt</td><td>2</td></tr>
-<tr><td>skleník</td><td>2</td></tr>
-</tbody>
-</table>
-
-<p><br>
-Nejvíc se staví rodinných domů.</p>
 <table id="tabulka2" class="display" style="width:100%">
 <thead>
 <tr><th>Městská část</th><th>Počet nemovitostí</th></tr>
@@ -127,6 +99,34 @@ Nejvíc se staví rodinných domů.</p>
 <tr><td>Praha 1</td><td>13</th></tr>
 <tr><td>Praha 7</td><td>11</th></tr>
 <tr><td>Praha-Nedvězí</td><td>8</th></tr>
+</tbody>
+</table>
+
+<p><br></p>
+<p>Nejvíc se staví rodinných domů.</p>
+<table id="tabulka" class="display" style="width:100%">
+<thead>
+<tr><th>Typ nemovitosti</th><th>Počet</th></tr>
+</thead>
+<tbody>
+<tr><td>rodinný dům</td><td>3759</td></tr>
+<tr><td>bytový dům</td><td>711</td></tr>
+<tr><td>garáž</td><td>478</td></tr>
+<tr><td>jiná stavba</td><td>212</td></tr>
+<tr><td>víceúčelová stavba</td><td>114</td></tr>
+<tr><td>stavba pro administrativu</td><td>97</td></tr>
+<tr><td>stavba občanského vybavení</td><td>92</td></tr>
+<tr><td>objekt k bydlení</td><td>79</td></tr>
+<tr><td>stavba pro obchod</td><td>59</td></tr>
+<tr><td>stavba pro rodinnou rekreaci</td><td>50</td></tr>
+<tr><td>stavba pro výrobu a skladování</td><td>49</td></tr>
+<tr><td>stavba technického vybavení</td><td>35</td></tr>
+<tr><td>objekt občanské vybavenosti</td><td>19</td></tr>
+<tr><td>stavba ubytovacího zařízení</td><td>15</td></tr>
+<tr><td>stavba pro dopravu</td><td>7</td></tr>
+<tr><td>zemědělská stavba</td><td>3</td></tr>
+<tr><td>průmyslový objekt</td><td>2</td></tr>
+<tr><td>skleník</td><td>2</td></tr>
 </tbody>
 </table>
 
