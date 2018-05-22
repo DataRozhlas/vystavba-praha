@@ -19,7 +19,7 @@ Z mapy na první pohled vystupují rozlehlé sklady, výrobní haly a obchodní 
 
 V Nehvizdech, v Hostivaři, v Roztokách nebo třeba v Cholupicích lze zase najít početné shluky nových rodinných domů, které jsou projevem pokračující [suburbanizace](https://www.irozhlas.cz/zpravy-domov/jak-se-meni-ceska-krajina-porovnejte-si-10-nejzastavenejsich-mist_201412051300_pkoci), tedy rozvoje rezidenčních staveb v zázemí velkých měst.
 
-V širším centru najdeme nových staveb daleko méně. Podle architekta Romana Kouckého, jehož tým připravil návrh [nového metropolitního plánu](http://plan.iprpraha.cz/cs/metropolitni-plan), se stavební rozvoj hlavního města téměř zastavil. Na vině je podle něj zdlouhavé a složité povolování nových staveb: „Délka přípravy nové stavby se dnes pohybuje kolem 15 let. (...) Ani třicet let po revoluci se hlavní město nedokázalo zbavit bolševického způsobu plánovaní,“ [řekl v rozhovoru pro DVTV](https://video.aktualne.cz/dvtv/prahu-brzdi-bolsevicky-zpusob-planovani-to-ze-mesto-funguje/r~dd516d9a465c11e8a79a0cc47ab5f122/).
+V širším centru najdeme nových staveb daleko méně. Podle architekta Romana Kouckého, jehož tým připravil návrh [nového metropolitního plánu](http://plan.iprpraha.cz/cs/metropolitni-plan), se stavební rozvoj hlavního města téměř zastavil. Na vině je podle něj zdlouhavé a složité povolování nových staveb: „Délka přípravy nové stavby se dnes pohybuje kolem 15 let. (...) Ani třicet let po revoluci se hlavní město nedokázalo zbavit bolševického způsobu plánování,“ [řekl v rozhovoru pro DVTV](https://video.aktualne.cz/dvtv/prahu-brzdi-bolsevicky-zpusob-planovani-to-ze-mesto-funguje/r~dd516d9a465c11e8a79a0cc47ab5f122/).
 
 Výstavba i tak od roku 2012 setrvale zrychluje. Loni se na území Prahy postavilo 1148 nemovitostí. V hlavním městě se ovšem [čeká na výstavbu desítek tisíc bytů](https://www.irozhlas.cz/ekonomika/praha-byty-vystavba-povoleni_1712171713_mos).
 
@@ -27,7 +27,7 @@ Výstavba i tak od roku 2012 setrvale zrychluje. Loni se na území Prahy postav
 
 ## Plán na zahuštění
 <!--[[ZPRAVY_AUDIO_PLAYER:7804511]]-->
-Podle Kouckého týmu – i podle zastupitelstva hlavního města, které už před lety schválilo výchozí zadání metropolitního plánu – je potřeba ve vnitřní Praze stavět víc než na okrajích. Stavět by se mělo hlavně na stovkách hektarů tak zvaných transformačních a rozvojových ploch uvnitř města – v prolukách, na brownfieldech či v městských džunglích. 
+Podle Kouckého týmu – i podle zastupitelstva hlavního města, které už před lety schválilo výchozí zadání metropolitního plánu – je potřeba ve vnitřní Praze stavět víc než na okrajích. Stavět by se mělo hlavně na stovkách hektarů takzvaných transformačních a rozvojových ploch uvnitř města – v prolukách, na brownfieldech či v městských džunglích. 
 
 „Máme se snažit uzavřít Prahu do sebe, už neobtěžovat okolní krajinu a začít Prahu zahušťovat. Praha je jedno z nejřidších měst podobné velikosti a podobného charakteru. A řídké město znamená drahé město. To, že Praha dosud funguje, je z mého pohledu sociálně-ekonomický zázrak,“ říká Koucký.
 
